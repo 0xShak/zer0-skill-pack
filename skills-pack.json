@@ -1,0 +1,52 @@
+{
+  "name": "zer0-skill-pack",
+  "version": "0.1.0",
+  "description": "Polymarket intelligence skills for Aeon. Daily theses, mispricing scanners, contrarian fades, narrative-vs-market gaps, paper-trade PnL journal, and alpha comment curation.",
+  "author": "ZER0 LABS (@shakaliyvadev)",
+  "license": "MIT",
+  "homepage": "https://atzer0.xyz",
+  "skills": [
+    {
+      "slug": "prediction-journal",
+      "description": "Settle resolved Polymarket positions and compute running PnL on tracked paper-trade positions.",
+      "category": "crypto",
+      "schedule": "0 12 * * *",
+      "default_enabled": false
+    },
+    {
+      "slug": "polymarket-thesis",
+      "description": "Daily take on three top Polymarket markets with side, price, conviction X/10, and reasoning.",
+      "category": "crypto",
+      "schedule": "0 13 * * *",
+      "default_enabled": false
+    },
+    {
+      "slug": "polymarket-edge",
+      "description": "Hunt for Polymarket mispricings where the price diverges from what the news baseline justifies.",
+      "category": "crypto",
+      "schedule": "0 14,22 * * *",
+      "default_enabled": false
+    },
+    {
+      "slug": "polymarket-contrarian",
+      "description": "High-conviction fades against heavy Polymarket favorites (>0.80) where a real tail scenario exists.",
+      "category": "crypto",
+      "schedule": "0 17 * * *",
+      "default_enabled": false
+    },
+    {
+      "slug": "narrative-vs-markets",
+      "description": "Compare X discourse to Polymarket odds on the same topic and flag the biggest narrative-vs-market gaps.",
+      "category": "crypto",
+      "schedule": "0 19 * * *",
+      "default_enabled": false
+    },
+    {
+      "slug": "polymarket-alpha-comments",
+      "description": "Curate whale callouts, insider-sounding takes, contrarian reasoning, and resolution alpha from Polymarket comment streams.",
+      "category": "crypto",
+      "schedule": "0 */6 * * *",
+      "default_enabled": false
+    }
+  ]
+}
