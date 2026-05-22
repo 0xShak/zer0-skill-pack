@@ -34,16 +34,14 @@ Use Aeon's built-in installer from your Aeon fork:
 
 ```bash
 # Browse what's in the pack
-./add-skill shakaliyvadev/zer0-skill-pack --list
+./add-skill 0xShak/zer0-skill-pack --list
 
 # Install all six skills
-./add-skill shakaliyvadev/zer0-skill-pack --all
+./add-skill 0xShak/zer0-skill-pack --all
 
 # Or install specific skills
-./add-skill shakaliyvadev/zer0-skill-pack polymarket-thesis polymarket-contrarian prediction-journal
+./add-skill 0xShak/zer0-skill-pack polymarket-thesis polymarket-contrarian prediction-journal
 ```
-
-(Replace `shakaliyvadev` with the GitHub org/user this repo eventually lives under.)
 
 After install, every skill lands in `skills/` with `enabled: false` in `aeon.yml`. Enable the ones you want and set schedules:
 
