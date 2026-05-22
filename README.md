@@ -30,20 +30,22 @@ These built-in Aeon skills layer cleanly with this pack:
 
 ## Install
 
-Use Aeon's built-in installer from your Aeon fork:
+Aeon's `./add-skill` script doesn't recurse into nested `skills/` subfolders (it expects skill dirs at repo root). Manual install via `cp -r` is the working pattern — same as how [vvvkernel's pack](https://github.com/baseddevoloper/aeon-skill-pack-vvvkernel) installs.
 
 ```bash
-# Browse what's in the pack
-./add-skill 0xShak/zer0-skill-pack --list
+# Clone this repo somewhere outside your Aeon fork
+git clone https://github.com/0xShak/zer0-skill-pack.git
+cd zer0-skill-pack
 
-# Install all six skills
-./add-skill 0xShak/zer0-skill-pack --all
+# Copy all 6 skills into your Aeon fork's skills/ directory
+cp -r skills/* /path/to/your/aeon/skills/
 
-# Or install specific skills
-./add-skill 0xShak/zer0-skill-pack polymarket-thesis polymarket-contrarian prediction-journal
+# Or copy specific skills
+cp -r skills/polymarket-thesis /path/to/your/aeon/skills/
+cp -r skills/prediction-journal /path/to/your/aeon/skills/
 ```
 
-After install, every skill lands in `skills/` with `enabled: false` in `aeon.yml`. Enable the ones you want and set schedules:
+Then register them in your Aeon fork's `aeon.yml` with `enabled: true` and the suggested schedules:
 
 ```yaml
 skills:
